@@ -33,16 +33,18 @@ function startBot () {
     function onCallbackQuery(callbackQuery) {
         console.log('callbackQuery:', callbackQuery);
         if (callbackQuery.data == 'helpCmd') {
-            var helpText = "какой то текст об игре";
+            var helpText = "Tonight game will be very hot";
             tg.sendMessage(callbackQuery.message.chat.id, helpText);
             tg.answerCallbackQuery(callbackQuery.id);
         } else if (callbackQuery.data == 'gameCmd') {
-            // стартуем нашу игру
+            var helpText = "Take off the t-shirt, make photo and send it to ur girlfriend";
+            tg.sendMessage(callbackQuery.message.chat.id, helpText);
+            tg.answerCallbackQuery(callbackQuery.id);
         }
     }
     // *********************************************
     function sendStartMessage(message) {
-        var text = 'Добро пожаловать в нашу супер-пупер игру';
+        var text = 'Hello, my dear Mitya';
         //
         var helpButton = {
             text:"Об игре",
